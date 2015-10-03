@@ -1,0 +1,19 @@
+parameters:
+    md.controller.result_converter.class: MD\Flavour\Controller\ResultConverter
+    md.twig_extension.kernel_variable.class: MD\Flavour\Twig\KernelVariableExtension
+
+services:
+    
+    md.controller.result_converter:
+        class: %md.controller.result_converter.class%
+        arguments:
+            - @templating
+        tags:
+            - { name: kernel.event_listener, event: kernel.view, method: onControllerResult }
+
+    md.twig_extension.kernel_variable:
+        class: %md.twig_extension.kernel_variable.class%
+        arguments:
+            - @kernel
+        tags:
+            - { name: twig.extension }
