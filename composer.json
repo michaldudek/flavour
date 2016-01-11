@@ -1,8 +1,7 @@
 {
     "name": "michaldudek/flavour",
-    "description": "Customizes Symfony2 for personal flavour.",
+    "description": "Customizes Symfony3 for personal flavour.",
     "license": "MIT",
-    "type": "project",
     "authors": [
         {
             "name": "Michał Pałys-Dudek",
@@ -11,7 +10,7 @@
     ],
     "require": {
         "php": ">=5.5",
-        "symfony/symfony": ">=2.7,<3.0",
+        "symfony/symfony": ">=3.0,<4.0",
         "michaldudek/foundation": ">=0.9,<2.0",
         "willdurand/negotiation": "1.3.*"
     },
