@@ -7,13 +7,13 @@ services:
     md.controller.result_converter:
         class: %md.controller.result_converter.class%
         arguments:
-            - @templating
+            - "@templating"
         tags:
             - { name: kernel.event_listener, event: kernel.view, method: onControllerResult }
 
     md.twig_extension.kernel_variable:
         class: %md.twig_extension.kernel_variable.class%
         arguments:
-            - @kernel
+            - "@kernel"
         tags:
             - { name: twig.extension }
